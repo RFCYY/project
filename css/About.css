@@ -1,0 +1,389 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    top: 0px;
+    background-color: rgb(123, 161, 197);
+    overflow: hidden;
+    font-size: 20px;
+    color: rgb(234, 247, 255);
+    opacity: 0.8;
+    z-index: 1000;
+}
+
+.homenav {
+    animation: load2 1s linear;
+}
+
+nav:hover {
+    opacity: 0.95;
+}
+
+nav .navtitle {
+    padding-left: 50px;
+    width: 30%;
+}
+
+nav .navtitle strong {
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+nav a {
+    display: block;
+    justify-content: center;
+    text-decoration: none;
+    z-index: 1;
+    height: inherit;
+    line-height: 70px;
+    width: 120px;
+    text-align: center;
+    font-weight: bolder;
+    color: rgb(84, 109, 158);
+    transition: 0.5s;
+}
+
+nav .navanim {
+    position: absolute;
+    height: inherit;
+    z-index: 0;
+    background: rgb(155, 200, 240);
+    border-radius: 5px;
+    left: 0px;
+    transition: all .5s ease 0s;
+    width: 120px;
+}
+
+nav .home,
+a:nth-child(2):hover~.navanim {
+    width: 120px;
+    left: 646px;
+}
+
+nav .about,
+a:nth-child(3):hover~.navanim {
+    width: 120px;
+    left: 815px;
+}
+
+nav .study,
+a:nth-child(4):hover~.navanim {
+    width: 120px;
+    left: 988px;
+}
+
+nav .interest,
+a:nth-child(5):hover~.navanim {
+    width: 120px;
+    left: 1155px;
+}
+
+nav .contact,
+a:nth-child(6):hover~.navanim {
+    width: 120px;
+    left: 1328px;
+}
+
+nav .none {
+    width: 20%;
+}
+
+@keyframes load2 {
+    0% {
+        top: -80px;
+        opacity: 0;
+    }
+
+    100% {
+        top: 0px;
+        opacity: 0.8;
+    }
+}
+
+#title {
+    text-align: left;
+    font-weight: bold;
+    font-size: 60px;
+    padding-top: 200px;
+    color: rgb(0, 0, 0);
+    padding-left: 200px;
+}
+
+#word {
+    text-align: left;
+    color: rgb(0, 0, 0);
+    padding-left: 200px;
+    margin-bottom: 30px;
+}
+
+
+
+#origin {
+    margin: 100px;
+    padding: 50px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+#gif {
+    padding: 10%;
+    border: 3px solid #999;
+}
+
+#intro {
+    margin-left: 540px;
+    margin-right: 300px;
+    background-color: rgba(245, 245, 220);
+    margin-bottom: 24px;
+    margin-top: 0px;
+}
+
+#intro h1 {
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 50px;
+    font-weight: bold;
+
+}
+
+.img-group {
+    position: relative;
+    display: inline-block;
+}
+
+.img-tip {
+    position: absolute;
+    top: 0;
+    background: #333;
+    color: #fff;
+    opacity: 0.6;
+    display: none;
+    font-size: 25px;
+}
+
+.img-tip a {
+    list-style: none;
+    color: #d8fd70;
+}
+
+.img-group:hover .img-tip {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+
+.int {
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    background-color: #9FD4BE;
+    margin-left: 40%;
+    margin-right: 40%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 15px;
+}
+
+.int h1 {
+    font-weight: bold;
+}
+
+.foot {
+    margin-top: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100vw;
+    height: 100px;
+    float: left;
+    clear: both;
+    text-align: center;
+    margin-bottom: 0px;
+    background-color: rgba(84, 132, 161, 0.8);
+}
+
+.foot p {
+    line-height: 10px;
+    color: rgb(28, 43, 43);
+}
+
+.link {
+    background-color: rgba(245, 245, 220);
+}
+
+.mid {
+    height: 180vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.headimg {
+    top: 0px;
+    height: 250px;
+    width: 100%;
+    background-image: url("https://variety.com/wp-content/uploads/2014/05/doraemon2.jpg?crop=0px%2C193px%2C1593px%2C887px&resize=1000%2C563");
+    background-size: 1540px;
+    background-repeat: no-repeat;
+    background-position-y: -190px;
+    background-position-x: -150px;
+    overflow: hidden;
+    border-bottom: 5px solid rgb(58, 83, 85);
+    animation: headload 0.9s linear;
+}
+
+.headimg h1 {
+    color: #e4931a;
+    font-size: 5em;
+    text-align: center;
+    line-height: 200px;
+}
+
+.mid .ab {
+    width: 800px;
+    height: 300px;
+    box-shadow: 0 0 15px rgb(83, 103, 110);
+    background: rgba(245, 245, 220);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.a1 .img {
+    background-image: url("https://images.tpointtech.com/definition/images/computer-definition.png");
+}
+
+.a2 .img {
+    background-image: url("https://www.shutterstock.com/image-vector/open-black-book-question-marks-600nw-672345160.jpg");
+}
+
+.a3 .img {
+    background-image: url("https://media.licdn.com/dms/image/v2/D5612AQEUySUrpCLn3g/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1673652511641?e=2147483647&v=beta&t=SB1TNHqp8absWvPaFXDEc3IX_OTVZfoHWwQTB5ZlxHo");
+}
+
+.ab p {
+    word-wrap: break-word;
+    color: rgb(41, 68, 68);
+    line-height: 24px;
+}
+
+.ab .txt {
+    width: 400px;
+    margin: 0 50px 0 50px;
+    font-size: 20px;
+    color: rgb(65, 114, 155);
+}
+
+.ab h2 {
+    text-align: center;
+    color: rgb(51, 86, 114);
+}
+
+.ab .img {
+    width: 300px;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(0.3);
+    opacity: 0.8;
+    transition: all 0.5s ease 0s;
+}
+
+.ab .img:hover {
+    transform: scale(1.1);
+}
+
+.ab .imghid {
+    overflow: hidden;
+}
+
+.a1 {
+    margin-left: 40%;
+    animation: a1load 2.5s linear;
+    transition: 0.5s 1s;
+}
+
+.a2 {
+    margin-left: 10%;
+    animation: a2load 3.6s linear;
+    transition: 0.5s;
+}
+
+.a3 {
+    margin-left: 40%;
+    animation: a3load 4.8s linear;
+    transition: 0.5s;
+}
+
+.a3 h2 {
+    margin-top: 100px;
+    line-height: 50px;
+}
+
+@keyframes a1load {
+    0% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 0;
+        margin-top: 100px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: 40px;
+    }
+}
+
+@keyframes a2load {
+    0% {
+
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+        margin-top: 100px;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes a3load {
+    0% {
+
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 0;
+        margin-top: 100px;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes headload {
+    0% {
+        height: 0px;
+    }
+
+    100% {
+        height: 240px;
+    }
+}

@@ -1,0 +1,261 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    top: 0px;
+    background-color: rgb(123, 161, 197);
+    overflow: hidden;
+    font-size: 20px;
+    color: rgb(234, 247, 255);
+    opacity: 0.8;
+    z-index: 1000;
+}
+
+.homenav {
+    animation: load2 1s linear;
+}
+
+nav:hover {
+    opacity: 0.95;
+}
+
+nav .navtitle {
+    padding-left: 50px;
+    width: 30%;
+}
+
+nav .navtitle strong {
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+nav a {
+    display: block;
+    justify-content: center;
+    text-decoration: none;
+    z-index: 1;
+    height: inherit;
+    line-height: 70px;
+    width: 120px;
+    text-align: center;
+    font-weight: bolder;
+    color: rgb(84, 109, 158);
+    transition: 0.5s;
+}
+
+nav .navanim {
+    position: absolute;
+    height: inherit;
+    z-index: 0;
+    background: rgb(155, 200, 240);
+    border-radius: 5px;
+    left: 0px;
+    transition: all .5s ease 0s;
+    width: 120px;
+}
+
+nav .home,
+a:nth-child(2):hover~.navanim {
+    width: 120px;
+    left: 646px;
+}
+
+nav .about,
+a:nth-child(3):hover~.navanim {
+    width: 120px;
+    left: 815px;
+}
+
+nav .study,
+a:nth-child(4):hover~.navanim {
+    width: 120px;
+    left: 988px;
+}
+
+nav .interest,
+a:nth-child(5):hover~.navanim {
+    width: 120px;
+    left: 1155px;
+}
+
+nav .contact,
+a:nth-child(6):hover~.navanim {
+    width: 120px;
+    left: 1328px;
+}
+
+nav .none {
+    width: 20%;
+}
+
+#word {
+    text-align: left;
+    color: rgb(0, 0, 0);
+    padding-left: 50px;
+    margin-bottom: 10px;
+}
+
+#subtitle {
+    text-align: left;
+    font-weight: bold;
+    font-size: 50px;
+    padding-top: 0px;
+    color: rgb(0, 0, 0);
+    padding-left: 0px;
+}
+
+.v1 {
+    background-color: #9FD4BE;
+    padding-bottom: 30px;
+}
+
+
+.foot {
+    margin-top: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100vw;
+    height: 100px;
+    float: left;
+    clear: both;
+    text-align: center;
+    margin-bottom: 0px;
+    background-color: rgba(84, 132, 161, 0.8);
+}
+
+.foot p {
+    line-height: 10px;
+    color: rgb(28, 43, 43);
+}
+
+.link {
+    background-color: rgba(245, 245, 220);
+}
+
+.intro {
+    margin-top: 100px;
+    margin-left: 10%;
+    float: left;
+    width: 55%;
+    text-align: left;
+    min-height: 100px;
+    color: rgb(255, 255, 255);
+    background-color: #9FD4BE;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    padding: 30px;
+}
+
+.example {
+    margin-top: 100px;
+    margin-left: 5%;
+    float: left;
+    width: 20%;
+    text-align: left;
+    min-height: 270px;
+    color: #9FD4BE;
+    background-color: rgba(245, 245, 220);
+    border-radius: 20px;
+    margin-bottom: 30px;
+    padding: 30px;
+}
+
+#tab {
+    width: auto;
+    background: #1caa5d;
+    border: solid 1px #1caa5d;
+}
+
+#tab>ul {
+    margin: 0;
+    padding: 10px 20px 0 20px;
+}
+
+#tab>ul>li {
+    list-style-type: none;
+}
+
+#tab>ul>li>a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    float: left;
+    padding: 10px;
+    margin: 5px;
+    font-weight: bold;
+}
+
+#tab>div {
+    clear: both;
+    padding: 0 15px;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+span:target~#tab>ul li:first-child a {
+    background: #1caa5d;
+}
+
+span:target~#tab>div:first-of-type {
+    visibility: hidden;
+    height: 0;
+    padding: 0 15px;
+}
+
+span~#tab>ul li:first-child a,
+#tab-1:target~#tab>ul li a[href$="#tab-1"],
+#tab-2:target~#tab>ul li a[href$="#tab-2"] {
+    background: #fff;
+    border-radius: 5px 5px 5px 5px;
+}
+
+span~#tab>ul li:first-child a::before,
+#tab-1:target~#tab>ul li a[href$="#tab-1"]::before,
+#tab-2:target~#tab>ul li a[href$="#tab-2"]::before {
+    background-color: white;
+    height: 100%;
+}
+
+span~#tab>div:first-of-type,
+#tab-1:target~#tab>div.tab-content-1,
+#tab-2:target~#tab>div.tab-content-2 {
+    visibility: visible;
+    height: 300px;
+    background: #fff;
+}
+
+span {
+    display: none;
+}
+
+#origin {
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 50px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.new {
+    margin-top: 650px;
+    text-align: center;
+    background-color: rgba(146, 214, 231, 0.8);
+    line-height: 50px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.ps {
+    padding-top: 30px;
+    background-color: rgba(146, 214, 231, 0.8);
+    padding-bottom: 30px;
+}
